@@ -43,7 +43,7 @@ label=NET:
 interval=3
 separator=false
 [concheck]
-color=#FFFF00
+color=#00FF00
 server=lss.oit.ac.jp
 vpn_name=OIT
 interval=3
@@ -51,6 +51,7 @@ separator=false
 [ipaddr]
 interval=3
 color=#FFFF00
+separator=false
 [date]
 interval=5
 
