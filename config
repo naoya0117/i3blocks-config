@@ -1,0 +1,56 @@
+# i3blocks config file
+separator_block_width=15
+markup=none
+
+
+command=$HOME/.config/i3blocks/scripts/${BLOCK_NAME}/${BLOCK_NAME}
+
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+
+[volume-pipewire]
+interval=1
+signal=1
+separator=false
+[micstatus]
+SOURCE=
+markup=pango
+interval=3
+signal=1
+separator=true
+
+[cpu_usage]
+markup=pango
+interval=persist
+#min_width=CPU 100.00%
+#REFRESH_TIME=1
+LABEL=CPU
+WARN_PERCENT=50
+CRIT_PERCENT=80
+DECIMALS=2
+
+[network]
+color=#00FF00
+label=NET: 
+interval=3
+separator=false
+[concheck]
+color=#FFFF00
+server=lss.oit.ac.jp
+vpn_name=OIT
+interval=3
+separator=false
+[ipaddr]
+interval=3
+color=#FFFF00
+[date]
+interval=5
+
+[battery]
+markup=pango
+interval=5
+

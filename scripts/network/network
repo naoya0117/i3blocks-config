@@ -1,0 +1,8 @@
+#!/bin/bash
+network=$(nmcli d s | grep -e wifi -e ethernet | grep -e " connected" | awk '{print$4}')
+
+if [[ ${network} =~ ^$ ]]; then
+    network=NONE
+fi
+
+echo ${network}

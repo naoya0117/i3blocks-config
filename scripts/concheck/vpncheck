@@ -1,0 +1,8 @@
+#!/bin/bash 
+
+[ -z ${server} ] && server="lss.oit.ac.jp"
+[ -z ${vpn_name} ] && vpn_name="OIT"
+
+responce=$(ping ${server} -c 2 2>/dev/null | grep -e "bytes from" | wc -l ) 
+
+[ ${responce} -gt 0 ] && echo "\[${vpn_name}\]"
